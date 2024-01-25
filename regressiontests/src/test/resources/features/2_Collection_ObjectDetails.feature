@@ -6,7 +6,7 @@ Feature: Verify museum collection details API search functionalities
     And path path_en + <objectNumber>
     And param key = apikey
     When method get
-    Then status 201
+    Then status 200
 
     And match response.artObject.objectNumber == <objectNumber>
     And match response.artObject.materials == <materials>
